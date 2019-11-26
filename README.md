@@ -4,7 +4,7 @@ By Sai Prakash Chittampalli
 
 ## The Challenge ##
 
-Design an entry mangaement system which will notify the visitors and the hosts of successful check-outs and check-ins.
+Design an entry management system which will notify the visitors and the hosts of successful check-outs and check-ins.
 
 ## Run Instructions ##
 
