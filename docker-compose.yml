@@ -1,0 +1,49 @@
+version: "3.0"
+
+services:
+  start_deps:
+    image: dadarek/wait-for-dependencies
+    depends_on: 
+      - rabbit
+      - redis
+    command: rabbit:5672
+  rabbit:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "localhost", "5672" ]
+      interval: 10s
+      timeout: 30s
+      retries: 3  
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+  backend:
+    build: ./backend
+    restart: on-failure
+    ports:
+      - "5000:5000"
+    depends_on: 
+      - rabbit
+      - redis
+      - start_deps
+  worker:
+    build: ./worker
+    restart: on-failure
+    depends_on: 
+      - rabbit
+      - redis
+      - start_deps
+  client:
+    build: ./ejsclient
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    depends_on:
+      - rabbit
+      - redis
+      - backend
+      - start_deps

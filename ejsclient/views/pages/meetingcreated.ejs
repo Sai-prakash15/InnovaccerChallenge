@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<h4>Your meeting details:</h4>
+<table>
+    <tr>
+        <td>Name:</td>
+        <td><%= visitor.name %></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><%= visitor.email %></td>
+    </tr>
+    <tr>
+        <td>Phone: </td>
+        <td><%= visitor.phone %></td>
+    </tr>
+    <tr>
+        <td>Check-in time:</td>
+        <td><%= new Date(visitor.checkinTime) %></td>
+    </tr>
+    <tr>
+        <td>Check-out time:</td>
+        <td><%= new Date(visitor.checkoutTime) %></td>
+    </tr>
+    <tr>
+        <td>Host name:</td>
+        <td><%= host.name %></td>
+    </tr>
+    <tr>
+        <td>Host email:</td>
+        <td><%= host.email %></td>
+    </tr>
+    <tr>
+        <td>Host phone:</td>
+        <td><%= host.phone %></td>
+    </tr>
+</table>
+<a href="/">Go home.</a>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<h3>Enter the details of your meeting:</h3>
+<h4>Our SMS notification service is currently unavailable.</h4>
+<form action="/meeting/new" method="POST">
+    <p>Enter your details:</p>
+    <br />
+    Name: <input type="text" name="visitorName" value="Lionel Messi" required><br />
+    Email: <input type="text" name="visitorEmail" value="dontmesswithme@fcb.com" required><br />
+    Phone: <input type="text" name="visitorPhone" value="1234567890" required><br />
+    Check-in time: <input type="date" name="visitorCheckinTimeDate" value="2019-12-12" required>
+    <input type="time" name="visitorCheckinTimeTime" value="12:00" required />
+    <br />
+    Check-out time: <input type="date" name="visitorCheckoutTimeDate" value="2019-12-12" required>
+    <input type="time" name="visitorCheckoutTimeTime" value="16:00" required />
+    <br />
+    <br />
+    <p>Enter the details of your host:</p>
+    Name: <input type="text" name="hostName" value="Cristiano Ronaldo" required><br />
+    Email: <input type="text" name="hostEmail" value="thetrueronaldo@cr7.com" required><br />
+    Phone: <input type="text" name="hostPhone" value="1234567890" required><br />
+    Address: <input type="text" name="address" value="Allianz Arena" required><br />
+    <input type="submit" value="New Meeting" />
+</form>
+<a href="/">Go home.</a>
+
+</html>

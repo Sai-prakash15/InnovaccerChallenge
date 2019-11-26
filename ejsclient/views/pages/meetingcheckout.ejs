@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<p><%= status === "SUCCESSFUL" ? "Checkout done." : "" %></p>
+<p>Enter the name of your host: </p>
+<form method="POST" action="/meeting/checkout">
+    Host: <input type="text" name="hostName" value="Cristiano Ronaldo" required /><br />
+    <input type="submit" value="Checkout" />
+</form>
+<a href="/">Go home.</a>
+
+</html>
